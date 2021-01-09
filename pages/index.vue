@@ -1,6 +1,12 @@
 <template>
-  <div class="h-screen p-3 font-serif bg-primary">
+  <div class="h-screen p-4 font-serif bg-primary">
     <h1 class="text-3xl text-gray-50">Hire Latam</h1>
+    <p class="container italic text-gray-50">
+      "Many companies are looking to grow their workforce in multiple parts of the world.
+      Latin America is a fast-growing tech environment and culture. We are seeing the gap
+      between practices in Silicon Valley and Latin America is becoming closer" - Bismarck Lepe
+    </p>
+    <h3 class="mt-3 text-xl text-gray-300">Jobs</h3>
     <div
       v-for="job in jobs"
       :key="job.id"
