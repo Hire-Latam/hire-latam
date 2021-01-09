@@ -9,7 +9,7 @@ module.exports = {
       pink: colors.fuchsia,
     },
     fontFamily: {
-      sans: ['Lora', 'serif'],
+      sans: ['Poppins', 'serif'],
     },
   },
 }
