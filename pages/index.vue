@@ -4,7 +4,7 @@
     <div
       v-for="job in jobs"
       :key="job.id"
-      class="border-2 rounded-2xl border-solid border-white flex"
+      class="border-2 rounded-2xl border-solid border-white flex mt-3"
     >
       <div class="flex">
         <img src="https://placehold.it/250x250" />
