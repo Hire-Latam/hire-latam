@@ -13,7 +13,7 @@
       :key="job.id"
       class="flex justify-between items-center border-2 rounded-2xl border-solid border-white p-2 mt-2 cursor-pointer hover:bg-gray-900 group"
     >
-      <div class="flex">
+      <div class="flex items-center">
         <div class="hidden md:flex rounded-full overflow-hidden w-16 h-16">
           <img class="object-cover" src="/logo.png" />
         </div>
