@@ -36,7 +36,7 @@
 </template>
 
 <script>
-const getJobs = () => import("~/statics/jobs.json").then((m) => m.default || m);
+const getJobs = () => import("~/static/jobs.json").then((m) => m.default || m);
 
 export default {
   async asyncData({ req }) {
