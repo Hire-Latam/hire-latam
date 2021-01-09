@@ -1,13 +1,13 @@
 <template>
   <div class="h-screen p-3 font-serif bg-primary">
-    <h1 class="text-5xl text-gray-50">Hire Latam</h1>
+    <h1 class="text-3xl text-gray-50">Hire Latam</h1>
     <div
       v-for="job in jobs"
       :key="job.id"
       class="flex items-center border-2 rounded-2xl border-solid border-white p-2 mt-2"
     >
       <div class="flex rounded-lg overflow-hidden h-16 w-16">
-        <img class="object-cover" src="https://placehold.it/150x150" />
+        <img class="object-cover" src="/logo.png" />
       </div>
       <div class="flex flex-col justify-between mx-4">
         <div>
