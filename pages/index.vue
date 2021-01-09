@@ -10,7 +10,7 @@
     <div
       v-for="job in jobs"
       :key="job.id"
-      class="flex items-center border-2 rounded-2xl border-solid border-white p-2 mt-2"
+      class="flex items-center border-2 rounded-2xl border-solid border-white p-2 mt-2 cursor-pointer hover:bg-gray-900"
     >
       <div class="flex rounded-lg overflow-hidden h-16 w-16">
         <img class="object-cover" src="/logo.png" />
