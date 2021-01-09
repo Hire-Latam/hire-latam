@@ -7,11 +7,13 @@
       class="border-2 rounded-2xl border-solid border-white flex mt-3"
     >
       <div class="flex">
-        <img src="https://placehold.it/250x250" />
+        <img src="https://placehold.it/150x150" />
       </div>
-      <div class="flex flex-col my-2 mx-4">
-        <h1 class="text-3xl text-gray-50">{{ job.title }}</h1>
-        <h2 class="text-xl text-gray-300">{{ job.company }}</h2>
+      <div class="flex flex-col justify-between my-2 mx-4">
+        <div>
+          <h1 class="text-3xl text-gray-50">{{ job.title }}</h1>
+          <h2 class="text-xl text-gray-300">{{ job.company }}</h2>
+        </div>
         <ul class="flex mt-2">
           <li class="mr-3 bg-gray-50 rounded-3xl p-1 px-3" v-for="tag in job.tags" :key="`${job.id}-${tag}`">
             {{ tag }}
