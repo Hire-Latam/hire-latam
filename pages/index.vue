@@ -1,6 +1,5 @@
 <template>
-  <div class="container p-3 font-serif">
-  <div class="bg-indigo-900">
+  <div class="h-screen p-3 font-serif bg-gray-900">
     <h1>Hire Latam</h1>
     <div
       v-for="job in jobs"
