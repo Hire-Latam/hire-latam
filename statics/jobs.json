@@ -1,0 +1,40 @@
+[
+    {
+        "id": "1",
+        "title": "Tech Lead ALV",
+        "company": "La verga",
+        "description": "description",
+        "salary": {
+            "currency": "USD",
+            "symbol": "$",
+            "min": "120000",
+            "max": "150000"
+        },
+        "tags": [
+            "javascris",
+            "el piton",
+            "a doble u ese",
+            "reactz",
+            "graf cu ele"
+        ]
+    },
+    {
+        "id": "2",
+        "title": "Software Engineer",
+        "company": "La verga",
+        "description": "description",
+        "salary": {
+            "currency": "USD",
+            "symbol": "$",
+            "min": "100000",
+            "max": "130000"
+        },
+        "tags": [
+            "javascris",
+            "el piton",
+            "a doble u ese",
+            "reactz",
+            "graf cu ele"
+        ]
+    }
+]
