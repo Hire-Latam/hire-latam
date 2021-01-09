@@ -14,6 +14,6 @@ export default {
     link: [{ rel: 'preconnect', href: 'https://fonts.gstatic.com' }],
     link: [{ rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Lora&display=swap' }],
   },
-  buildDir: 'nuxt-dist',
+  buildDir: 'dist',
   buildModules: ['@nuxtjs/tailwindcss']
 }
