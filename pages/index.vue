@@ -11,12 +11,12 @@
       </div>
       <div class="flex flex-col justify-between mx-4">
         <div>
-          <h1 class="text-3xl text-gray-50">{{ job.title }}</h1>
-          <h2 class="text-xl text-gray-300">{{ job.company }}</h2>
+          <h1 class="text-xl text-gray-50">{{ job.title }}</h1>
+          <h2 class="text-sm text-gray-300">{{ job.company }}</h2>
         </div>
         <ul class="flex mt-2">
           <li
-            class="mr-3 bg-gray-50 rounded-3xl p-1 px-3"
+            class="text-xs mr-3 bg-gray-50 rounded-3xl p-1 px-3"
             v-for="tag in job.tags"
             :key="`${job.id}-${tag}`"
           >
