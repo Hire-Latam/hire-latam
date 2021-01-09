@@ -11,7 +11,7 @@
     <div
       v-for="job in jobs"
       :key="job.id"
-      class="flex justify-between items-center border-2 rounded-2xl border-solid border-white p-2 mt-2 cursor-pointer hover:bg-gray-900"
+      class="flex justify-between items-center border-2 rounded-2xl border-solid border-white p-2 mt-2 cursor-pointer hover:bg-gray-900 group"
     >
       <div class="flex">
         <div class="hidden md:flex rounded-full overflow-hidden w-16 h-16">
@@ -33,7 +33,7 @@
           </ul>
         </div>
       </div>
-      <button class="mr-3 p-3 bg-gray-50 rounded-lg text-sm">Apply now</button>
+      <button class="mr-3 p-3 bg-gray-50 rounded-lg text-sm opacity-0 group-hover:opacity-100">Apply now</button>
     </div>
   </div>
 </template>
