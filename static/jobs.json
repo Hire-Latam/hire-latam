@@ -1,7 +1,7 @@
 [
     {
         "id": "1",
-        "title": "Tech Lead ALV",
+        "title": "Tech Lead",
         "company": "Wizeline",
         "description": "description",
         "salary": {
@@ -34,7 +34,9 @@
             "Python",
             "AWS",
             "React",
-            "GraphQL"
+            "GraphQL",
+            "Vue.js",
+            "Node.js"
         ]
     }
 ]

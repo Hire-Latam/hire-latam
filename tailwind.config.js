@@ -14,6 +14,7 @@ module.exports = {
       primary: "#003049",
       red: colors.rose,
       pink: colors.fuchsia,
+      white: colors.white,
     },
     fontFamily: {
       sans: ['Poppins', 'serif'],
