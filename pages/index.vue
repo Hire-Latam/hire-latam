@@ -12,23 +12,20 @@
         </ul>
       </div>
       <h3 class="mt-3 text-xl text-gray-50">Jobs</h3>
-      <div class="flex flex-col">
-        <job-item v-for="job in jobs" :key="job.id" :job="job" />
-      </div>
+      <jobs-list :jobs="jobs" />
     </div>
   </div>
 </template>
 
 <script>
-import JobItem from "../components/JobItem.vue";
+import JobsList from "../components/JobsList.vue";
 
 const getJobs = () => import("~/static/jobs.json").then((m) => m.default || m);
 
 export default {
-  components: { JobItem },
+  components: { JobsList },
   async asyncData({ req }) {
     const jobs = await getJobs();
-    console.log(jobs);
     return { jobs };
   },
 };

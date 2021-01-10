@@ -31,8 +31,6 @@
 </template>
 
 <script>
-const getJobs = () => import("~/static/jobs.json").then((m) => m.default || m);
-
 export default {
   props: ["job"],
 };
