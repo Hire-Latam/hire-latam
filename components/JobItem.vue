@@ -1,7 +1,7 @@
 <template>
-  <div class="mt-2 border-2 rounded-2xl border-solid border-white hover:bg-gray-900">
+  <div class="mt-2 border-2 rounded-2xl border-solid border-white hover:bg-gray-900 group">
     <div
-      class="flex justify-between items-center p-2 cursor-pointer group"
+      class="flex justify-between items-center p-2 cursor-pointer"
       @click="$emit('click', job.id)"
     >
       <div class="flex items-center">
