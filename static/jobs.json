@@ -38,5 +38,236 @@
             "Vue.js",
             "Node.js"
         ]
+    },
+    {
+        "id": "3",
+        "title": "IOS Engineer",
+        "company": "Wizeline",
+        "description": "Wizeline is a software development and design services company with operations in the U.S., Mexico, Vietnam, Thailand, Australia, and Spain. High-growth companies need engineering capacity to scale. Wizeline brings depth in product design, technical writing, project management, and across engineering disciplines.",
+        "salary": {
+            "currency": "USD",
+            "symbol": "$",
+            "min": "100000",
+            "max": "130000"
+        },
+        "tags": [
+            "Javascript",
+            "Python",
+            "AWS",
+            "React",
+            "GraphQL",
+            "Vue.js",
+            "Node.js"
+        ]
+    },
+    {
+        "id": "4",
+        "title": "Android Engineer",
+        "company": "Wizeline",
+        "description": "Wizeline is a software development and design services company with operations in the U.S., Mexico, Vietnam, Thailand, Australia, and Spain. High-growth companies need engineering capacity to scale. Wizeline brings depth in product design, technical writing, project management, and across engineering disciplines.",
+        "salary": {
+            "currency": "USD",
+            "symbol": "$",
+            "min": "100000",
+            "max": "130000"
+        },
+        "tags": [
+            "Javascript",
+            "Python",
+            "AWS",
+            "React",
+            "GraphQL",
+            "Vue.js",
+            "Node.js"
+        ]
+    },
+    {
+        "id": "5",
+        "title": "Engineering Manager",
+        "company": "Wizeline",
+        "description": "Wizeline is a software development and design services company with operations in the U.S., Mexico, Vietnam, Thailand, Australia, and Spain. High-growth companies need engineering capacity to scale. Wizeline brings depth in product design, technical writing, project management, and across engineering disciplines.",
+        "salary": {
+            "currency": "USD",
+            "symbol": "$",
+            "min": "100000",
+            "max": "130000"
+        },
+        "tags": [
+            "Javascript",
+            "Python",
+            "AWS",
+            "React",
+            "GraphQL",
+            "Vue.js",
+            "Node.js"
+        ]
+    },
+    {
+        "id": "6",
+        "title": "Software Architect",
+        "company": "Wizeline",
+        "description": "Wizeline is a software development and design services company with operations in the U.S., Mexico, Vietnam, Thailand, Australia, and Spain. High-growth companies need engineering capacity to scale. Wizeline brings depth in product design, technical writing, project management, and across engineering disciplines.",
+        "salary": {
+            "currency": "USD",
+            "symbol": "$",
+            "min": "100000",
+            "max": "130000"
+        },
+        "tags": [
+            "Javascript",
+            "Python",
+            "AWS",
+            "React",
+            "GraphQL",
+            "Vue.js",
+            "Node.js"
+        ]
+    },
+    {
+        "id": "7",
+        "title": "Solutions Architect",
+        "company": "Wizeline",
+        "description": "Wizeline is a software development and design services company with operations in the U.S., Mexico, Vietnam, Thailand, Australia, and Spain. High-growth companies need engineering capacity to scale. Wizeline brings depth in product design, technical writing, project management, and across engineering disciplines.",
+        "salary": {
+            "currency": "USD",
+            "symbol": "$",
+            "min": "100000",
+            "max": "130000"
+        },
+        "tags": [
+            "Javascript",
+            "Python",
+            "AWS",
+            "React",
+            "GraphQL",
+            "Vue.js",
+            "Node.js"
+        ]
+    },
+    {
+        "id": "8",
+        "title": "Code Reviewer",
+        "company": "Wizeline",
+        "description": "Wizeline is a software development and design services company with operations in the U.S., Mexico, Vietnam, Thailand, Australia, and Spain. High-growth companies need engineering capacity to scale. Wizeline brings depth in product design, technical writing, project management, and across engineering disciplines.",
+        "salary": {
+            "currency": "USD",
+            "symbol": "$",
+            "min": "100000",
+            "max": "130000"
+        },
+        "tags": [
+            "Javascript",
+            "Python",
+            "AWS",
+            "React",
+            "GraphQL",
+            "Vue.js",
+            "Node.js"
+        ]
+    },
+    {
+        "id": "9",
+        "title": "VP Engineering",
+        "company": "Wizeline",
+        "description": "Wizeline is a software development and design services company with operations in the U.S., Mexico, Vietnam, Thailand, Australia, and Spain. High-growth companies need engineering capacity to scale. Wizeline brings depth in product design, technical writing, project management, and across engineering disciplines.",
+        "salary": {
+            "currency": "USD",
+            "symbol": "$",
+            "min": "100000",
+            "max": "130000"
+        },
+        "tags": [
+            "Javascript",
+            "Python",
+            "AWS",
+            "React",
+            "GraphQL",
+            "Vue.js",
+            "Node.js"
+        ]
+    },
+    {
+        "id": "10",
+        "title": "Director of Software Engineering",
+        "company": "Wizeline",
+        "description": "Wizeline is a software development and design services company with operations in the U.S., Mexico, Vietnam, Thailand, Australia, and Spain. High-growth companies need engineering capacity to scale. Wizeline brings depth in product design, technical writing, project management, and across engineering disciplines.",
+        "salary": {
+            "currency": "USD",
+            "symbol": "$",
+            "min": "100000",
+            "max": "130000"
+        },
+        "tags": [
+            "Javascript",
+            "Python",
+            "AWS",
+            "React",
+            "GraphQL",
+            "Vue.js",
+            "Node.js"
+        ]
+    },
+    {
+        "id": "11",
+        "title": "Software Engineer II",
+        "company": "Wizeline",
+        "description": "Wizeline is a software development and design services company with operations in the U.S., Mexico, Vietnam, Thailand, Australia, and Spain. High-growth companies need engineering capacity to scale. Wizeline brings depth in product design, technical writing, project management, and across engineering disciplines.",
+        "salary": {
+            "currency": "USD",
+            "symbol": "$",
+            "min": "100000",
+            "max": "130000"
+        },
+        "tags": [
+            "Javascript",
+            "Python",
+            "AWS",
+            "React",
+            "GraphQL",
+            "Vue.js",
+            "Node.js"
+        ]
+    },
+    {
+        "id": "12",
+        "title": "Software Engineer III",
+        "company": "Wizeline",
+        "description": "Wizeline is a software development and design services company with operations in the U.S., Mexico, Vietnam, Thailand, Australia, and Spain. High-growth companies need engineering capacity to scale. Wizeline brings depth in product design, technical writing, project management, and across engineering disciplines.",
+        "salary": {
+            "currency": "USD",
+            "symbol": "$",
+            "min": "100000",
+            "max": "130000"
+        },
+        "tags": [
+            "Javascript",
+            "Python",
+            "AWS",
+            "React",
+            "GraphQL",
+            "Vue.js",
+            "Node.js"
+        ]
+    },
+    {
+        "id": "13",
+        "title": "Staff Software Engineer",
+        "company": "Wizeline",
+        "description": "Wizeline is a software development and design services company with operations in the U.S., Mexico, Vietnam, Thailand, Australia, and Spain. High-growth companies need engineering capacity to scale. Wizeline brings depth in product design, technical writing, project management, and across engineering disciplines.",
+        "salary": {
+            "currency": "USD",
+            "symbol": "$",
+            "min": "100000",
+            "max": "130000"
+        },
+        "tags": [
+            "Javascript",
+            "Python",
+            "AWS",
+            "React",
+            "GraphQL",
+            "Vue.js",
+            "Node.js"
+        ]
     }
 ]
