@@ -2,7 +2,7 @@
   <div
     class="flex flex-col items-center h-full min-h-screen p-4 font-serif bg-primary"
   >
-    <div class="max-w-screen-lg">
+    <div class="w-full max-w-screen-lg">
       <h1 class="text-3xl text-gray-50">Hire Latam</h1>
       <h3 class="mt-3 text-xl text-gray-50">Jobs</h3>
       <div class="flex flex-col">
