@@ -4,12 +4,6 @@
   >
     <div class="max-w-screen-lg">
       <h1 class="text-3xl text-gray-50">Hire Latam</h1>
-      <p class="container italic text-gray-50">
-        "Many companies are looking to grow their workforce in multiple parts of
-        the world. Latin America is a fast-growing tech environment and culture.
-        We are seeing the gap between practices in Silicon Valley and Latin
-        America is becoming closer" - Bismarck Lepe
-      </p>
       <h3 class="mt-3 text-xl text-gray-50">Jobs</h3>
       <div class="flex flex-col">
         <div
