@@ -16,7 +16,12 @@ import JobItem from "../components/JobItem.vue";
 const getJobs = () => import("~/static/jobs.json").then((m) => m.default || m);
 
 export default {
-  props: ["jobs"],
+  props: {
+    jobs: {
+      type: Array,
+      required: true
+    }
+  },
   data: function () {
     return {
       activeItem: null
