@@ -3,7 +3,7 @@
         "id": "1",
         "title": "Tech Lead",
         "company": "Wizeline",
-        "description": "description",
+        "description": "Wizeline is a software development and design services company with operations in the U.S., Mexico, Vietnam, Thailand, Australia, and Spain. High-growth companies need engineering capacity to scale. Wizeline brings depth in product design, technical writing, project management, and across engineering disciplines.",
         "salary": {
             "currency": "USD",
             "symbol": "$",
@@ -22,7 +22,7 @@
         "id": "2",
         "title": "Software Engineer",
         "company": "Wizeline",
-        "description": "description",
+        "description": "Wizeline is a software development and design services company with operations in the U.S., Mexico, Vietnam, Thailand, Australia, and Spain. High-growth companies need engineering capacity to scale. Wizeline brings depth in product design, technical writing, project management, and across engineering disciplines.",
         "salary": {
             "currency": "USD",
             "symbol": "$",

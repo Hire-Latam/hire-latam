@@ -3,14 +3,29 @@
     class="flex flex-col items-center h-full min-h-screen p-4 font-serif bg-primary"
   >
     <div class="w-full max-w-screen-lg">
-      <div class="flex justify-between">
-        <h1 class="text-3xl text-white">Hire Latam</h1>
+      <nav class="flex justify-between">
+        <a class="text-3xl text-white" href="/">Hire Latam</a>
         <ul class="flex flex-row items-end">
-          <li class="text-white ml-5 hover:underline cursor-pointer"> Latam </li>
-          <li class="text-white ml-5 hover:underline cursor-pointer"> Contact Us </li>
-          <li class="text-white ml-5 hover:underline cursor-pointer font-black"> Post a Job </li>
+          <a
+            class="text-white ml-5 hover:underline cursor-pointer"
+            href="/latam"
+          >
+            Latam
+          </a>
+          <a
+            class="text-white ml-5 hover:underline cursor-pointer"
+            href="/contact"
+          >
+            Contact Us
+          </a>
+          <a
+            class="text-white ml-5 hover:underline cursor-pointer font-black"
+            href="/post-job"
+          >
+            Post a Job
+          </a>
         </ul>
-      </div>
+      </nav>
       <h3 class="mt-3 text-xl text-white">Jobs</h3>
       <jobs-list :jobs="jobs" />
     </div>
