@@ -6,8 +6,9 @@
       <div class="flex justify-between">
         <h1 class="text-3xl text-gray-50">Hire Latam</h1>
         <ul class="flex flex-row items-end">
-          <li class="text-gray-50 ml-3 hover:underline cursor-pointer"> Latam </li>
-          <li class="text-gray-50 ml-3 hover:underline cursor-pointer"> Contact Us </li>
+          <li class="text-gray-50 ml-5 hover:underline cursor-pointer"> Latam </li>
+          <li class="text-gray-50 ml-5 hover:underline cursor-pointer"> Contact Us </li>
+          <li class="text-gray-50 ml-5 hover:underline cursor-pointer font-black"> Post a Job </li>
         </ul>
       </div>
       <h3 class="mt-3 text-xl text-gray-50">Jobs</h3>
