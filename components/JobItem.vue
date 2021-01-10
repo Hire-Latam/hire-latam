@@ -8,8 +8,17 @@
       </div>
       <div class="flex flex-col justify-between mx-4">
         <div>
-          <h1 class="text-xl text-gray-50">{{ job.title }}</h1>
-          <h2 class="text-sm text-gray-300">{{ job.company }}</h2>
+          <h1 class="text-xl text-gray-50">
+            {{ job.title }}
+            <span class="text-xs text-gray-300">
+              {{ job.salary.symbol }}{{ job.salary.min }}
+              -
+              {{ job.salary.symbol }}{{ job.salary.max }}
+            </span>
+          </h1>
+          <h2 class="font-light text-sm text-gray-300">
+            {{ job.company }}
+          </h2>
         </div>
         <ul class="flex flex-wrap mt-2">
           <li
