@@ -2,7 +2,7 @@
     {
         "id": "1",
         "title": "Tech Lead ALV",
-        "company": "La verga",
+        "company": "Wizeline",
         "description": "description",
         "salary": {
             "currency": "USD",
@@ -21,7 +21,7 @@
     {
         "id": "2",
         "title": "Software Engineer",
-        "company": "La verga",
+        "company": "Wizeline",
         "description": "description",
         "salary": {
             "currency": "USD",
