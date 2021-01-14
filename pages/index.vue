@@ -67,7 +67,7 @@
         >
       </div>
       <h3 class="mt-3 text-xl text-white">Jobs</h3>
-      <search v-model="terms" @input="handleInputChange"/>
+      <search v-model="terms" @input="terms = $event"/>
       <jobs-list :jobs="jobs" />
     </div>
   </div>
@@ -93,9 +93,8 @@ export default {
   },
   methods: {
     handleInputChange: function (terms) {
-      console.log(terms);
       this.terms = terms
     }
-  }
+  },
 };
 </script>
