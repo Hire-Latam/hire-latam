@@ -29,6 +29,7 @@ export default {
           messagingSenderId: process.env.FIREBASE_MESSAGING_SENDER_ID,
           appId: process.env.FIREBASE_APP_ID,
           measurementId: process.env.FIREBASE_MEASUREMENT_ID,
+          databaseURL: `https://${process.env.FIREBASE_DATABASE_NAME}.firebaseio.com`,
         },
         services: {
           firestore: true

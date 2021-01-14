@@ -48,27 +48,31 @@
         <a
           href="/"
           class="bg-gray-700 hover:bg-gray-700 text-white block px-3 py-2 rounded-md text-base font-medium"
-          >Home</a
         >
+          Home
+        </a>
         <a
           href="/latam"
           class="text-white hover:bg-gray-700 block px-3 py-2 rounded-md text-base font-medium"
-          >Latam</a
         >
+          Latam
+        </a>
         <a
           href="/contact"
           class="text-white hover:bg-gray-700 block px-3 py-2 rounded-md text-base font-medium"
-          >Contact Us</a
         >
+          Contact Us
+        </a>
         <a
           href="/post-job"
           class="text-white hover:bg-gray-700 block px-3 py-2 rounded-md text-base font-medium"
-          >Post a Job</a
         >
+          Post a Job
+        </a>
       </div>
       <h3 class="mt-3 text-xl text-white">Jobs</h3>
-      <search v-model="terms" @input="terms = $event"/>
-      <jobs-list :jobs="jobs" />
+      <search v-model="terms" @input="terms = $event" />
+      <jobs-list />
     </div>
   </div>
 </template>
@@ -77,24 +81,18 @@
 import JobsList from "../components/JobsList.vue";
 import Search from "../components/Search.vue";
 
-const getJobs = () => import("~/static/jobs.json").then((m) => m.default || m);
-
 export default {
   components: { JobsList, Search },
-  data: function() {
+  data: function () {
     return {
       burgerMenuActive: false,
       terms: "",
     };
   },
-  async asyncData({ req }) {
-    const jobs = await getJobs();
-    return { jobs };
-  },
   methods: {
     handleInputChange: function (terms) {
       this.terms = terms;
-    }
+    },
   },
 };
 </script>

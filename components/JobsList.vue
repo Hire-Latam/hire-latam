@@ -13,21 +13,17 @@
 <script>
 import JobItem from "../components/JobItem.vue";
 
-const getJobs = () => import("~/static/jobs.json").then((m) => m.default || m);
-
 export default {
-  props: {
-    jobs: {
-      type: Array,
-      required: true
-    }
-  },
+  components: { JobItem },
   data: function () {
     return {
-      activeItem: null
-    }
+      jobs: [],
+      activeItem: null,
+    };
   },
-  components: { JobItem },
+  async fetch() {
+    this.jobs = await getJobs(this.$fire.firestore);
+  },
   methods: {
     onClick: function (itemId) {
       if (this.activeItem === itemId) {
@@ -35,7 +31,18 @@ export default {
       } else {
         this.activeItem = itemId;
       }
-    }
+    },
   },
 };
+
+async function getJobs(firestore, tagFilters = []) {
+  let jobsRef = firestore.collection("jobs");
+  if (tagFilters.length) {
+    jobsRef = jobsRef.where("tags", "array-contains-any", tagFilters);
+  }
+  const jobsSnapshot = await jobsRef.get();
+  return jobsSnapshot.docs.map((doc) => {
+    return { id: doc.id, ...doc.data() };
+  });
+}
 </script>
