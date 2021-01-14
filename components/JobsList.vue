@@ -15,6 +15,12 @@ import JobItem from "../components/JobItem.vue";
 
 export default {
   components: { JobItem },
+  props: {
+    terms: {
+      type: String,
+      required: true,
+    },
+  },
   data: function () {
     return {
       jobs: [],
@@ -33,10 +39,16 @@ export default {
       }
     },
   },
+  watch: {
+    terms: function (terms) {
+      // getJobs(this.$fire.firestore);
+    }
+  }
 };
 
-async function getJobs(firestore, tagFilters = []) {
+async function getJobs(firestore, tagFilters = [], terms = "") {
   let jobsRef = firestore.collection("jobs");
+  
   if (tagFilters.length) {
     jobsRef = jobsRef.where("tags", "array-contains-any", tagFilters);
   }

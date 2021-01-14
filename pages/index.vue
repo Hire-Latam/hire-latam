@@ -71,8 +71,8 @@
         </a>
       </div>
       <h3 class="mt-3 text-xl text-white">Jobs</h3>
-      <search v-model="terms" @input="terms = $event" />
-      <jobs-list />
+      <search v-model="terms" @input="handleInputChange" />
+      <jobs-list :terms="terms" />
     </div>
   </div>
 </template>
