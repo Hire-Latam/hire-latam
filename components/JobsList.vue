@@ -13,6 +13,8 @@
 <script>
 import JobItem from "../components/JobItem.vue";
 
+const getJobs = () => import("~/static/jobs.json").then((m) => m.default || m);
+
 export default {
   components: { JobItem },
   props: {
@@ -28,7 +30,7 @@ export default {
     };
   },
   async fetch() {
-    this.jobs = await getJobs(this.$fire.firestore);
+    this.jobs = await getJobs();
   },
   methods: {
     onClick: function (itemId) {
@@ -39,22 +41,5 @@ export default {
       }
     },
   },
-  watch: {
-    terms: function (terms) {
-      // getJobs(this.$fire.firestore);
-    }
-  }
 };
-
-async function getJobs(firestore, tagFilters = [], terms = "") {
-  let jobsRef = firestore.collection("jobs");
-  
-  if (tagFilters.length) {
-    jobsRef = jobsRef.where("tags", "array-contains-any", tagFilters);
-  }
-  const jobsSnapshot = await jobsRef.get();
-  return jobsSnapshot.docs.map((doc) => {
-    return { id: doc.id, ...doc.data() };
-  });
-}
 </script>
