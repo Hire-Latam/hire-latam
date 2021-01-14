@@ -21,15 +21,13 @@ export default {
       '@nuxtjs/firebase',
       {
         config: {
-          apiKey: {
-            apiKey: "AIzaSyCpB0-I0ZwuJODKBhzmDFcj2EHwLQV6wFo",
-            authDomain: "hire-latam.firebaseapp.com",
-            projectId: "hire-latam",
-            storageBucket: "hire-latam.appspot.com",
-            messagingSenderId: "1062476652280",
-            appId: "1:1062476652280:web:b2479c70eef4b33c23650d",
-            measurementId: "G-0GLY8MBQL0"
-          }
+          apiKey: process.env.FIREBASE_API_KEY,
+          authDomain: process.env.FIREBASE_AUTH_DOMAIN,
+          projectId: process.env.FIREBASE_PROJECT_ID,
+          storageBucket: process.env.FIREBASE_STORAGE_BUCKET,
+          messagingSenderId: process.env.FIREBASE_MESSAGINGS_ENDER_ID,
+          appId: process.env.FIREBASE_APP_ID,
+          measurementId: process.env.FIREBASE_MEASUREMENT_ID,
         },
         services: {
           firestore: true

@@ -8,6 +8,7 @@
   },
   "dependencies": {
     "@nuxtjs/firebase": "^7.3.0",
+    "firebase": "^8.2.2",
     "nuxt": "^2.14.12"
   },
   "devDependencies": {
