@@ -30,6 +30,9 @@ export default {
             appId: "1:1062476652280:web:b2479c70eef4b33c23650d",
             measurementId: "G-0GLY8MBQL0"
           }
+        },
+        services: {
+          firestore: true
         }
       }
     ]
