@@ -93,7 +93,7 @@ export default {
   },
   methods: {
     handleInputChange: function (terms) {
-      this.terms = terms
+      this.terms = terms;
     }
   },
 };
