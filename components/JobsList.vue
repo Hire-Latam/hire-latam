@@ -21,17 +21,24 @@ export default {
       required: true,
     },
   },
-  data: function () {
+  data() {
     return {
       jobs: [],
       activeItem: null,
     };
   },
-  async fetch() {
-    this.jobs = await getJobs(this.$axios);
+  created() {
+    getJobs(this.$axios).then((jobs) => {
+      this.jobs = jobs;
+    });
   },
+  // async fetch() {
+  //   this.jobs = await getJobs(this.$axios);
+  // },
   methods: {
     onClick: function (itemId) {
+      console.log(process.env);
+      getJobs(this.$axios).then(console.log);
       if (this.activeItem === itemId) {
         this.activeItem = null;
       } else {
