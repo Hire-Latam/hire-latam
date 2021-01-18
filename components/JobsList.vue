@@ -13,8 +13,6 @@
 <script>
 import JobItem from "../components/JobItem.vue";
 
-const getJobs = () => import("~/static/jobs.json").then((m) => m.default || m);
-
 export default {
   components: { JobItem },
   props: {
@@ -30,7 +28,7 @@ export default {
     };
   },
   async fetch() {
-    this.jobs = await getJobs();
+    this.jobs = await getJobs(this.$axios);
   },
   methods: {
     onClick: function (itemId) {
@@ -41,5 +39,12 @@ export default {
       }
     },
   },
+};
+
+const getJobs = async (client) => {
+  const jobs = await client.$get("/.netlify/functions/query-jobs");
+  console.log(jobs);
+
+  return jobs.map((job) => ({ id: job._id, ...job }));
 };
 </script>
