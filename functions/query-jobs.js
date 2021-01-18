@@ -1,4 +1,4 @@
-import { MongoClient } from "mongodb";
+const { MongoClient } = require('mongodb');
 
 export async function handler(event, context) {
     if (!MONGO_DB_URI) {
