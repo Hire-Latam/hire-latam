@@ -27,14 +27,9 @@ export default {
       activeItem: null,
     };
   },
-  created() {
-    getJobs(this.$axios).then((jobs) => {
-      this.jobs = jobs;
-    });
+  async fetch() {
+    this.jobs = await getJobs(this.$axios);
   },
-  // async fetch() {
-  //   this.jobs = await getJobs(this.$axios);
-  // },
   methods: {
     onClick: function (itemId) {
       console.log(process.env);
@@ -46,12 +41,11 @@ export default {
       }
     },
   },
+  fetchOnServer: false,
 };
 
 const getJobs = async (client) => {
   const jobs = await client.$get("/.netlify/functions/query-jobs");
-  console.log(jobs);
-
   return jobs.map((job) => ({ id: job._id, ...job }));
 };
 </script>
