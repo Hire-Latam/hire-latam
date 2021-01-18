@@ -14,6 +14,10 @@ export default {
     link: [{ rel: 'preconnect', href: 'https://fonts.gstatic.com' }],
     link: [{ rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Poppins&display=swap' }],
   },
+  modules: ['@nuxtjs/axios'],
   buildDir: 'nuxt-dist',
   buildModules: ['@nuxtjs/tailwindcss'],
+  axios: {
+    baseURL: process.env.URL,
+  },
 }
