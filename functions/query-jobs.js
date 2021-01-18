@@ -1,6 +1,8 @@
 const { MongoClient } = require('mongodb');
 
-export async function handler(event, context) {
+exports.handler = async function (event, context) {
+    const { MONGO_DB_URI } = process.env;
+
     if (!MONGO_DB_URI) {
         return {
             statusCode: 500,
@@ -8,16 +10,24 @@ export async function handler(event, context) {
         }
     }
 
-    const { MONGO_DB_URI } = process.env;
-    const client = await (new MongoClient(MONGO_DB_URI, { useNewUrlParser: true })).connect();
-    const jobs = client.db("hirelatam").collection("jobs");
+    const client = new MongoClient(MONGO_DB_URI, { useNewUrlParser: true });
+    try {
+        await client.connect();
 
-    console.log(event);
-    console.log(context);
-    console.log(jobs);
+        const collection = client.db("hirelatam").collection("jobs");
+        const jobs = await collection.find().toArray();
 
-    return {
-        statusCode: 200,
-        body: jobs
-    };
+        return {
+            statusCode: 200,
+            body: JSON.stringify(jobs),
+        };
+    } catch (error) {
+        console.error(error)
+        return {
+            statusCode: 500,
+            body: "Internal Server Error",
+        }
+    } finally {
+        client.close();
+    }
 };
