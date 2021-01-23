@@ -42,14 +42,7 @@ export default {
   },
   async fetch() {
     let counter = 2;
-    const loadingTextTimeout = setInterval(() => {
-      if (this.$refs.loading.innerText) {
-        this.$refs.loading.innerText = "Loading" + new Array(counter).join(".");
-        counter = (counter + 1) % 5;
-      }
-    }, 300);
     this.jobs = await getJobs(this.$axios, this.terms);
-    clearInterval(loadingTextTimeout);
   },
   methods: {
     onClick: function(itemId) {
@@ -65,9 +58,17 @@ export default {
 
 const getJobs = async ($axios, terms) => {
   const params = { q: terms };
+  const loadingTextTimeout = setInterval(() => {
+    if (this.$refs.loading.innerText) {
+      this.$refs.loading.innerText = "Loading" + new Array(counter).join(".");
+      counter = (counter + 1) % 5;
+    }
+  }, 300);
   const jobs = await $axios.$get("/.netlify/functions/query-jobs", {
     params,
   });
+
+  clearInterval(loadingTextTimeout);
   return jobs.map((job) => ({ id: job._id, ...job }));
 };
 </script>
