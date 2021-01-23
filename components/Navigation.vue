@@ -3,7 +3,7 @@
     <nav class="flex justify-between">
       <a class="text-3xl text-white" href="/">{{ getTitle() }}</a>
       <ul class="flex flex-row items-center invisible sm:visible">
-        <a class="text-white ml-5 hover:underline cursor-pointer" href="/latam">
+        <a class="text-white ml-5 hover:underline cursor-pointer" href="/">
           Board
         </a>
         <a class="text-white ml-5 hover:underline cursor-pointer" href="/latam">
