@@ -1,6 +1,6 @@
 const { MongoClient } = require("mongodb");
 
-exports.handler = async function(event, context) {
+exports.handler = async function(event) {
   const { MONGO_DB_URI } = process.env;
 
   if (!MONGO_DB_URI) {

@@ -1,6 +1,10 @@
 const { MongoClient } = require("mongodb");
 
-exports.handler = async function(event, context) {
+function clean(string) {
+  return string.trim();
+}
+
+exports.handler = async function(event) {
   const { MONGO_DB_URI } = process.env;
 
   if (!MONGO_DB_URI) {
@@ -30,19 +34,21 @@ exports.handler = async function(event, context) {
     const collection = client.db("hirelatam").collection("jobs");
 
     const job = {
-      title: jobTitle,
-      company: companyName,
-      description,
+      title: clean(jobTitle),
+      company: clean(companyName),
+      description: clean(description),
       salary: {
         currency: "USD",
         min: parseInt(salaryMin, 10),
         max: parseInt(salaryMax, 10),
         symbol: "$",
       },
-      tags: tags.split(",").map((tag) => tag.trim()),
+      tags: tags.split(",").map(clean),
+      createdOn: new Date(),
     };
 
-    collection.insert(job);
+    const result = await collection.insertOne(job);
+    console.log("Job Created", result);
 
     return {
       statusCode: 200,
