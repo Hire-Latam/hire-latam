@@ -6,7 +6,7 @@ exports.handler = async function(event, context) {
   if (!MONGO_DB_URI) {
     return {
       statusCode: 500,
-      body: "Internal Server Error",
+      body: "Internal Server Error :v",
     };
   }
 
@@ -14,38 +14,42 @@ exports.handler = async function(event, context) {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   });
+
   try {
-    const { q: textQuery } = event.queryStringParameters;
+    const body = JSON.parse(event.body);
+    const {
+      jobTitle,
+      companyName,
+      description,
+      salaryMin,
+      salaryMax,
+      tags,
+    } = body;
 
     await client.connect();
-
     const collection = client.db("hirelatam").collection("jobs");
 
-    const minDate = new Date();
-    minDate.setDate(minDate.getDate() - 60);
-    let query = {
-      createdOn: {
-        $gt: minDate,
+    const job = {
+      title: jobTitle,
+      company: companyName,
+      description,
+      salary: {
+        currency: "USD",
+        min: parseInt(salaryMin, 10),
+        max: parseInt(salaryMax, 10),
+        symbol: "$",
       },
+      tags: tags.split(",").map((tag) => tag.trim()),
     };
-    if (textQuery) {
-      query.$text = {
-        $search: textQuery,
-        $caseSensitive: false,
-      };
-    }
 
-    const jobs = await collection
-      .find(query)
-      .sort({ createdOn: -1 })
-      .toArray();
+    collection.insert(job);
 
     return {
       statusCode: 200,
-      body: JSON.stringify(jobs),
+      body: JSON.stringify(job),
     };
   } catch (error) {
-    console.error(error);
+    console.log(error);
     return {
       statusCode: 500,
       body: "Internal Server Error",
