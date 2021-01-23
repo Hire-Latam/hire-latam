@@ -31,16 +31,9 @@ export default {
     };
   },
   async fetch() {
-    this.jobs = await this.getJobs();
+    this.jobs = await getJobs(this.$axios, this.terms);
   },
   methods: {
-    async getJobs() {
-      const params = { q: this.terms };
-      const jobs = await this.$axios.$get("/.netlify/functions/query-jobs", {
-        params,
-      });
-      return jobs.map((job) => ({ id: job._id, ...job }));
-    },
     onClick: function (itemId) {
       if (this.activeItem === itemId) {
         this.activeItem = null;
@@ -50,5 +43,13 @@ export default {
     },
   },
   fetchOnServer: false,
+};
+
+const getJobs = async ($axios, terms) => {
+  const params = { q: terms };
+  const jobs = await $axios.$get("/.netlify/functions/query-jobs", {
+    params,
+  });
+  return jobs.map((job) => ({ id: job._id, ...job }));
 };
 </script>
