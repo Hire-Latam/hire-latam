@@ -1,7 +1,5 @@
 <template>
-  <div
-    class="flex flex-col items-center h-full min-h-screen p-4 font-serif bg-primary"
-  >
+  <div class="flex flex-col items-center h-full min-h-screen p-4">
     <div class="w-full max-w-screen-lg relative">
       <nav class="flex justify-between">
         <a class="text-3xl text-white" href="/">Hire Latam</a>
@@ -90,7 +88,7 @@ export default {
     };
   },
   methods: {
-    handleInputChange: function(terms) {
+    handleInputChange: function (terms) {
       this.terms = terms;
     },
   },

@@ -1,0 +1,3 @@
+<template>
+  <h1>Post a Job!</h1>
+</template>
