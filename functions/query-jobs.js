@@ -10,7 +10,7 @@ exports.handler = async function (event, context) {
         }
     }
 
-    const client = new MongoClient(MONGO_DB_URI, { useNewUrlParser: true });
+    const client = new MongoClient(MONGO_DB_URI, { useNewUrlParser: true, useUnifiedTopology: true });
     try {
         const { q: textQuery } = event.queryStringParameters;
 
@@ -18,13 +18,17 @@ exports.handler = async function (event, context) {
 
         const collection = client.db("hirelatam").collection("jobs");
 
-        let query = {};
+        const minDate = new Date();
+        minDate.setDate(minDate.getDate() - 60);
+        let query = {
+            createdOn: {
+                $gt: minDate,
+            }
+        };
         if (textQuery) {
-            query = {
-                $text: {
-                    $search: textQuery,
-                    $caseSensitive: false,
-                },
+            query.$text = {
+                $search: textQuery,
+                $caseSensitive: false,
             };
         }
 
