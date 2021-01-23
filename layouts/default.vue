@@ -1,5 +1,5 @@
 <template>
-  <body class="bg-primary font-serif">
+  <div class="bg-primary font-serif">
     <Nuxt />
-  </body>
+  </div>
 </template>
