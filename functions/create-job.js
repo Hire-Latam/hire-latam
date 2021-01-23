@@ -28,6 +28,7 @@ exports.handler = async function(event) {
       salaryMin,
       salaryMax,
       tags,
+      applicationUrl,
     } = body;
 
     await client.connect();
@@ -42,8 +43,10 @@ exports.handler = async function(event) {
         min: parseInt(salaryMin, 10),
         max: parseInt(salaryMax, 10),
         symbol: "$",
+        j,
       },
       tags: tags.split(",").map(clean),
+      applicationUrl: clean(applicationUrl),
       createdOn: new Date(),
     };
 
