@@ -1,5 +1,5 @@
 <template>
-  <input @input="$emit('input', $event.target.value)" />
+  <input @change="$emit('change', $event.target.value)" />
 </template>
 
 <script>

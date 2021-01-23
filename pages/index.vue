@@ -69,7 +69,7 @@
         </a>
       </div>
       <h3 class="mt-3 text-xl text-white">Jobs</h3>
-      <search v-model="terms" @input="handleInputChange" />
+      <search v-model="terms" @change="handleInputChange" />
       <jobs-list :terms="terms" />
     </div>
   </div>
