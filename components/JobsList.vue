@@ -32,8 +32,6 @@ export default {
   },
   methods: {
     onClick: function (itemId) {
-      console.log(process.env);
-      getJobs(this.$axios).then(console.log);
       if (this.activeItem === itemId) {
         this.activeItem = null;
       } else {
