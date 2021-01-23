@@ -12,10 +12,23 @@ exports.handler = async function (event, context) {
 
     const client = new MongoClient(MONGO_DB_URI, { useNewUrlParser: true });
     try {
+        const { q: textQuery } = event.queryStringParameters;
+
         await client.connect();
 
         const collection = client.db("hirelatam").collection("jobs");
-        const jobs = await collection.find().toArray();
+
+        let query = {};
+        if (textQuery) {
+            query = {
+                $text: {
+                    $search: textQuery,
+                    $caseSensitive: false,
+                },
+            };
+        }
+
+        const jobs = await collection.find(query).sort({ createdOn: -1 }).toArray();
 
         return {
             statusCode: 200,
