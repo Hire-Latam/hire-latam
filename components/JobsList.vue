@@ -21,6 +21,9 @@ export default {
       required: true,
     },
   },
+  watch: {
+    terms: "$fetch",
+  },
   data() {
     return {
       jobs: [],
@@ -28,9 +31,16 @@ export default {
     };
   },
   async fetch() {
-    this.jobs = await getJobs(this.$axios);
+    this.jobs = await this.getJobs();
   },
   methods: {
+    async getJobs() {
+      const params = { q: this.terms };
+      const jobs = await this.$axios.$get("/.netlify/functions/query-jobs", {
+        params,
+      });
+      return jobs.map((job) => ({ id: job._id, ...job }));
+    },
     onClick: function (itemId) {
       if (this.activeItem === itemId) {
         this.activeItem = null;
@@ -40,10 +50,5 @@ export default {
     },
   },
   fetchOnServer: false,
-};
-
-const getJobs = async (client) => {
-  const jobs = await client.$get("/.netlify/functions/query-jobs");
-  return jobs.map((job) => ({ id: job._id, ...job }));
 };
 </script>
