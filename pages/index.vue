@@ -3,7 +3,7 @@
     <div class="w-full max-w-screen-lg relative">
       <navigation active-page="home" />
       <h3 class="mt-3 text-xl text-white">Jobs</h3>
-      <div class="w-1/3">
+      <div class="w-full sm:w-1/3">
         <form-input v-model.lazy="terms" placeholder="Search keywords" />
       </div>
       <jobs-list :terms="terms" />
