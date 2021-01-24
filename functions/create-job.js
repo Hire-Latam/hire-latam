@@ -43,7 +43,6 @@ exports.handler = async function(event) {
         min: parseInt(salaryMin, 10),
         max: parseInt(salaryMax, 10),
         symbol: "$",
-        j,
       },
       tags: tags.split(",").map(clean),
       applicationUrl: clean(applicationUrl),
