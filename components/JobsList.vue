@@ -13,7 +13,7 @@
       v-else
       class="py-3 flex flex-row items-center min-h-full justify-center"
     >
-      <p class="text-2xl text-white text-center" ref="loading">
+      <p class="text-2xl text-white text-center" ref="loadingText">
         Loading
       </p>
     </div>
@@ -32,7 +32,10 @@ export default {
     },
   },
   watch: {
-    terms: "$fetch",
+    terms: async function() {
+      this.jobs = [];
+      this.jobs = await this.getJobs();
+    },
   },
   data() {
     return {
@@ -40,9 +43,8 @@ export default {
       activeItem: null,
     };
   },
-  async fetch() {
-    let counter = 2;
-    this.jobs = await getJobs(this.$axios, this.terms);
+  async mounted() {
+    this.jobs = await this.getJobs();
   },
   methods: {
     onClick: function(itemId) {
@@ -52,23 +54,27 @@ export default {
         this.activeItem = itemId;
       }
     },
+    getJobs: async function() {
+      const terms = this.terms;
+      const params = { q: terms };
+      const loadingElement = this.$refs.loadingText;
+
+      let counter = 2;
+      const loadingTextTimeout = setInterval(() => {
+        if (loadingElement) {
+          loadingElement.innerText = "Loading" + new Array(counter).join(".");
+          counter = (counter + 1) % 5;
+        }
+      }, 300);
+
+      const jobs = await this.$axios.$get("/.netlify/functions/query-jobs", {
+        params,
+      });
+
+      clearInterval(loadingTextTimeout);
+      return jobs.map((job) => ({ id: job._id, ...job }));
+    },
   },
   fetchOnServer: false,
-};
-
-const getJobs = async ($axios, terms) => {
-  const params = { q: terms };
-  const loadingTextTimeout = setInterval(() => {
-    if (this.$refs.loading.innerText) {
-      this.$refs.loading.innerText = "Loading" + new Array(counter).join(".");
-      counter = (counter + 1) % 5;
-    }
-  }, 300);
-  const jobs = await $axios.$get("/.netlify/functions/query-jobs", {
-    params,
-  });
-
-  clearInterval(loadingTextTimeout);
-  return jobs.map((job) => ({ id: job._id, ...job }));
 };
 </script>
