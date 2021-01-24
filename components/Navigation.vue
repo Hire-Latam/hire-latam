@@ -6,14 +6,9 @@
         <a class="text-white ml-5 hover:underline cursor-pointer" href="/">
           Board
         </a>
-        <a class="text-white ml-5 hover:underline cursor-pointer" href="/latam">
+        <a class="text-white ml-5 hover:underline cursor-pointer" href="https://contxto.com/en/informative/covid-startup-ecosystem-latin-america/
+">
           Latam
-        </a>
-        <a
-          class="text-white ml-5 hover:underline cursor-pointer"
-          href="/contact"
-        >
-          Contact Us
         </a>
         <a
           class="text-white ml-5 hover:underline cursor-pointer font-black"
@@ -49,16 +44,10 @@
         Home
       </a>
       <a
-        href="/latam"
+        href="https://contxto.com/en/informative/covid-startup-ecosystem-latin-america/"
         class="text-white hover:bg-gray-700 block px-3 py-2 rounded-md text-base font-medium"
       >
         Latam
-      </a>
-      <a
-        href="/contact"
-        class="text-white hover:bg-gray-700 block px-3 py-2 rounded-md text-base font-medium"
-      >
-        Contact Us
       </a>
       <a
         href="/post-job"
