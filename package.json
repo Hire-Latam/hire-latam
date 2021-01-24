@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "@nuxtjs/axios": "^5.12.5",
+    "lodash.debounce": "^4.0.8",
     "mongodb": "^3.6.3",
     "nuxt": "^2.14.12"
   },

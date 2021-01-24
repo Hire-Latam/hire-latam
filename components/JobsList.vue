@@ -21,6 +21,7 @@
 </template>
 
 <script>
+import debounce from "lodash.debounce";
 import JobItem from "../components/JobItem.vue";
 
 export default {
@@ -32,10 +33,10 @@ export default {
     },
   },
   watch: {
-    terms: async function() {
+    terms: debounce(async function() {
       this.jobs = [];
       this.jobs = await this.getJobs();
-    },
+    }, 300),
   },
   data() {
     return {
@@ -67,7 +68,7 @@ export default {
         }
       }, 300);
 
-      const jobs = await this.$axios.$get("/.netlify/functions/query-jobs", {
+     const jobs = await this.$axios.$get("/.netlify/functions/query-jobs", {
         params,
       });
 
