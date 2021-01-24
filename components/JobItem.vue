@@ -33,11 +33,14 @@
           </ul>
         </div>
       </div>
-      <button
-        class="mr-3 p-3 bg-gray-50 rounded-lg text-sm opacity-0 group-hover:opacity-100"
-      >
-        Apply now
-      </button>
+      <a :href="job.applicationUrl" target="_blank">
+        <button
+          class="mr-3 p-3 bg-gray-50 rounded-lg text-sm opacity-0 group-hover:opacity-100"
+          @click.stop
+        >
+          Apply now
+        </button>
+      </a>
     </div>
     <div v-if="showDescription" class="p-4">
       <p class="text-white">{{ job.description }}</p>
@@ -48,5 +51,10 @@
 <script>
 export default {
   props: ["job", "showDescription"],
+  methods: {
+    redirectToJob: function (event) {
+      event.stopPropagation();
+    }
+  }
 };
 </script>
